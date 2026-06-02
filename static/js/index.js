@@ -90,31 +90,96 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Video carousel autoplay when in view
-function setupVideoCarouselAutoplay() {
-    const carouselVideos = document.querySelectorAll('.results-carousel video');
-    
-    if (carouselVideos.length === 0) return;
-    
+// Showcase video autoplay when in view
+function setupShowcaseVideoAutoplay() {
+    const showcaseVideos = document.querySelectorAll('.video-autoplay');
+
+    if (showcaseVideos.length === 0) return;
+
+    const tryPlay = (video) => {
+        if (video.readyState >= 1) {
+            try {
+                video.currentTime = 0;
+            } catch (error) {
+                console.log('Could not reset video time:', error);
+            }
+        }
+        const playPromise = video.play();
+
+        if (playPromise && typeof playPromise.catch === 'function') {
+            playPromise.catch((error) => {
+                console.log('Autoplay prevented:', error);
+            });
+        }
+    };
+
+    const ensurePlayable = (video) => {
+        if (video.readyState >= 2) {
+            tryPlay(video);
+            return;
+        }
+
+        const resumeWhenReady = () => {
+            tryPlay(video);
+        };
+
+        video.addEventListener('canplay', resumeWhenReady, { once: true });
+        video.addEventListener('loadeddata', resumeWhenReady, { once: true });
+        video.load();
+        setTimeout(resumeWhenReady, 250);
+    };
+
+    showcaseVideos.forEach((video) => {
+        video.muted = true;
+        video.loop = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        video.preload = 'auto';
+        video.setAttribute('muted', '');
+        video.setAttribute('loop', '');
+        video.setAttribute('autoplay', '');
+        video.setAttribute('playsinline', '');
+        video.setAttribute('preload', 'auto');
+
+        if (video.classList.contains('ablation-video')) {
+            video.load();
+            tryPlay(video);
+            setTimeout(() => tryPlay(video), 250);
+        }
+
+        video.addEventListener('loadedmetadata', () => {
+            try {
+                video.currentTime = 0;
+            } catch (error) {
+                console.log('Could not reset video time:', error);
+            }
+        });
+
+        video.addEventListener('ended', () => {
+            tryPlay(video);
+        });
+    });
+
+    if (!('IntersectionObserver' in window)) {
+        showcaseVideos.forEach(tryPlay);
+        return;
+    }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const video = entry.target;
             if (entry.isIntersecting) {
-                // Video is in view, play it
-                video.play().catch(e => {
-                    // Autoplay failed, probably due to browser policy
-                    console.log('Autoplay prevented:', e);
-                });
+                ensurePlayable(video);
             } else {
-                // Video is out of view, pause it
                 video.pause();
             }
         });
     }, {
-        threshold: 0.5 // Trigger when 50% of the video is visible
+        threshold: 0.25,
+        rootMargin: '200px 0px'
     });
-    
-    carouselVideos.forEach(video => {
+
+    showcaseVideos.forEach((video) => {
         observer.observe(video);
     });
 }
@@ -136,7 +201,7 @@ $(document).ready(function() {
 	
     bulmaSlider.attach();
     
-    // Setup video autoplay for carousel
-    setupVideoCarouselAutoplay();
+    // Setup autoplay for the teaser and showcase videos
+    setupShowcaseVideoAutoplay();
 
 })

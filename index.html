@@ -43,35 +43,11 @@
   <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
   <!-- TODO: Replace with first author's Twitter handle -->
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
   <!-- TODO: Same as description above -->
   <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
+              <div class="video-card">
   <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">  
 
   <!-- TODO: Replace with your paper title and authors -->
   <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
@@ -107,6 +83,18 @@
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <script defer src="static/js/index.js"></script>
   
   <!-- Structured Data for Academic Papers -->
@@ -241,23 +229,27 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <!-- <h1 class="title is-1 publication-title">Scene and Human in One World: Reconstruction in a Feedforward Pass</h1> -->
+             <h1 class="title is-1 publication-title"><span style="color: red;">S</span>cene and <span style="color: red;">H</span>uman in <span style="color: red;">O</span>ne <span style="color: red;">W</span>orld: Reconstruction in a Feedforward Pass</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://github.com/bowieshi" target="_blank">Boao Shi</a>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://fengq1a0.github.io/" target="_blank">Qiao Feng</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://yh2371.github.io/" target="_blank">Yiming Huang</a>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://lingjie0206.github.io/" target="_blank">Lingjie Liu<sup>+</sup></a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
+                    <span class="author-block">University of Pennsylvania<br></span>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="eql-cntrb"><small><br><sup>+</sup>Indicates Correspondence Author</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -319,13 +311,13 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+      <video poster="" id="tree" class="video-autoplay" autoplay controls muted loop playsinline height="100%" preload="metadata">
         <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <source src="static/videos/start_video.mp4" type="video/mp4">
       </video>
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Given a human-centric video, we reconstruct human and scene in a single feedforward pass and also ensure good human and scene alignmend in 3D space.
       </h2>
     </div>
   </div>
@@ -341,7 +333,7 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Reconstructing humans in dynamic scenes from moving monocular cameras remains challenging due to scale ambiguity, human–scene misalignment, and occlusion interference. Rather than treating human mesh recovery and scene reconstruction as separate tasks, we believe that accurate human–scene reconstruction requires the two tasks to mutually inform each other: parametric human models offer semantic structure and metric-scale priors, while scene geometry provides spatial context for human localization and alignment. Built on this insight, we introduce SHOW, a mask-promptable human mesh recovery framework that couples feed-forward 3D scene reconstruction with Human Mesh Recovery in a unified metric space. SHOW injects human semantics and scale priors from parametric human models into normalized point-map prediction, enabling metric-scale scene reconstruction from inherently scale-ambiguous monocular input. In turn, the recovered scene geometry constrains human mesh estimation, encouraging spatially consistent human placement and improved human–scene alignment. To handle complex multi-person and cluttered scenes, SHOW further incorporates a promptable masking mechanism that enables flexible target-human selection while suppressing background distractions and occlusion interference. Through joint training, the model learns both human-aware geometric features and geometry-constrained human features, producing aligned metric-scale reconstructions from monocular human-centric videos. Extensive experiments demonstrate that SHOW improves metric-scale consistency, human–scene alignment, and reconstruction accuracy under challenging camera motion, occlusion, and cluttered backgrounds.
           </p>
         </div>
       </div>
@@ -350,46 +342,275 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Metric visualization -->
+<section class="section metric-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Human-Scene Alignment Metric</h2>
+        <h3 class="subtitle has-text-centered metric-highlight">
+          We proposed a new metric for evaluating parametric model alignment with scene point maps.
+        </h3>
+        <div class="metric-teaser-card">
+          <img
+            src="static/videos/metric_teaser.png"
+            alt="Metric visualization teaser"
+          />
+        </div>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <div class="content has-text-justified metric-content">
+          <p>
+            Intuitive visualization of human–scene metrics: <strong>Human–Scene Chamfer (HS-CF)</strong> and <strong>Human–Scene Variance (HS-V)</strong>. HS-CF measures the normalized chamfer distance between body model points and human point map (scene point map under human mask). HS-V compares the spatial variance of body model points and human point map along horizontal and vertical axes in camera frame. Together, these metrics assess whether the reconstructed human and scene are properly aligned in a unified space.
+          </p>
+          <p>
+            (a) The human is well aligned with the scene, resulting in low HS-CF and HS-V. 
+          </p>
+          <p>
+            (b) The human is at an incorrect location but has the correct scale, leading to high HS-CF but low HS-V. 
+          </p>
+          <p>
+            (c,d) The human is correctly located but exhibits scale mismatch, resulting in low HS-CF but high HS-V.
+          </p>
+            
+
+          <!-- <p><strong>Human-Scene-Chamfer (HS-CF).</strong> HS-CF is defined as:</p>
+          <div class="metric-equation">
+            \[
+            \mathrm{HS\!-CF} = \frac{\sum_{i=1}^{N} \min_{p \in \mathcal{S}} \lVert h_i - p \rVert_2}{\sum_{i=1}^{N} \left| z_i^{\mathrm{human}} - \bar{z}^{\mathrm{human}} \right|},
+            \]
+          </div>
+
+          <p>
+            where \(\mathcal{H} = \{h_i\}_{i=1}^{N}\) denotes the set of body model visible points; \(\mathcal{S}\) denotes the filtered human point map; \(z_i^{\mathrm{human}}\) is the \(z\)-coordinate of the human visible point \(h_i\) in camera frame, and \(\bar{z}^{\mathrm{human}}\) is the average \(z\)-coordinate of all visible human points.
+          </p>
+
+          <p>
+            To reduce boundary outliers and errors from imperfect human masks, we keep only points within the 5%-95% or 10%-90% percentile range, which becomes \(HS\!-CF_5\), \(HS\!-V_5\) and \(HS\!-CF_{10}\), \(HS\!-V_{10}\).
+          </p>
+
+          <p><strong>Human-Scene-Variance (HS-V).</strong> We first compute the variance of the body model visible points along the horizontal (\(x\)) and vertical (\(y\)) axes in camera frame. Similarly, we compute the variance of the human point map along the same axes. The HS-V is then defined as the average \(\ell_1\) distance between these variances:</p>
+          <div class="metric-equation">
+            \[
+            \mathrm{HS\!-V} = \frac{1}{2} \left(
+            \left| \mathrm{Var}_x(\mathcal{V}_h) - \mathrm{Var}_x(\mathcal{P}_h) \right| +
+            \left| \mathrm{Var}_y(\mathcal{V}_h) - \mathrm{Var}_y(\mathcal{P}_h) \right|
+            \right),
+            \]
+          </div> -->
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+<!-- End metric visualization -->
+
+
+<!-- Comparison videos -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <h2 class="title is-3 has-text-centered">Comparison with Existing Methods</h2>
+      <div class="video-showcase">
+        <div class="video-group">
+          <h3 class="title is-5 video-group-title has-text-centered">Comparison 1</h3>
+          <div class="video-grid video-grid-comparison">
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_1_raw_resized.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Raw input</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_1_unish.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">UniSH</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_1_human3r.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Human3R</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_1_ours.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Ours</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-group">
+          <h3 class="title is-5 video-group-title has-text-centered">Comparison 2</h3>
+          <div class="video-grid video-grid-comparison">
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_2_raw_resized.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Raw input</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_2_unish.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">UniSH</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_2_human3r.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Human3R</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_2_ours.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Ours</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-group">
+          <h3 class="title is-5 video-group-title has-text-centered">Comparison 3</h3>
+          <div class="video-grid video-grid-comparison">
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_3_raw_resized.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Raw input</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_3_unish.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">UniSH</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_3_human3r.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Human3R</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay comparison-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/compare_3_ours.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">Ours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End comparison videos -->
+
+<!-- Ablation videos -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Ablation Study</h2>
+      <div class="video-showcase">
+        <div class="video-group ablation-intro">
+          <!-- <h3 class="title is-5 video-group-title has-text-centered">Raw input</h3> -->
+          <div class="video-card">
+            <video class="video-autoplay ablation-video ablation-video-raw" autoplay muted loop playsinline preload="metadata" style="width: 50%; height: auto;">
+              <source src="static/videos/ablation_raw.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">raw input</p>
+          </div>
+        </div>
+        <div class="video-group">
+          <h3 class="title is-5 video-group-title has-text-centered">w/o camera encoder</h3>
+          <div class="video-grid video-grid-ablation">
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_full_model.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">full model - front</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_full_model_side.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">full model - side</p>
+            </div>
+            <div class="video-card video-card-placeholder">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_no_cam_encoder.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">w/o camera encoder - front</p>
+            </div>
+            <div class="video-card video-card-placeholder">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_no_cam_encoder_side.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">w/o camera encoder - side</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-group">
+          <h3 class="title is-5 video-group-title has-text-centered">w/o mask prompt</h3>
+          <div class="video-grid video-grid-ablation">
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_full_model.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">full model - front</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_full_model_side.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">full model - side</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_no_mask_prompt.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">w/o mask prompt - front</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_no_mask_prompt_side.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">w/o mask prompt - side</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-group">
+          <h3 class="title is-5 video-group-title has-text-centered">w/o joint modelling</h3>
+          <div class="video-grid video-grid-ablation">
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_full_model.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">full model - front</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_full_model_side.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">full model - side</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_no_joint_model.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">w/o joint modelling - front</p>
+            </div>
+            <div class="video-card">
+              <video class="video-autoplay ablation-video" autoplay muted loop playsinline preload="metadata">
+                <source src="static/videos/ablation_ani_no_joint_model_side.mp4" type="video/mp4">
+              </video>
+              <p class="video-caption">w/o joint modelling - side</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End ablation videos -->
 
 
 
@@ -399,13 +620,13 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3 has-text-centered">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
             <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/tUYPkxy9J-U?si=Rq-ixh3IhmMj2L2t" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -413,60 +634,6 @@
   </div>
 </section>
 <!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 
